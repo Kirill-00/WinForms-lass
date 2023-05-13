@@ -51,5 +51,27 @@ namespace Calculator
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void comma_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Focus();
+            if (!richTextBox1.Text.Contains(","))
+            {
+                richTextBox1.Text += ",";
+            }
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '+' || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '/' || e.KeyChar == '(' || e.KeyChar == ')' || e.KeyChar == ',')
+            {
+                if (richTextBox1.Text == "0")
+                {
+                    richTextBox1.Text = "";
+                }
+                return;
+            }
+            e.Handled = true;
+        }
     }
 }

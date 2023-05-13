@@ -19,6 +19,9 @@ namespace Lesson6
         public Form1()
         {
             InitializeComponent();
+            Timer timer = new Timer();
+            timer.Enabled = true;
+            timer.Tick += new EventHandler(timer_Tick);
             var fontsCollection = new InstalledFontCollection();
             var font = fontsCollection.Families;
             foreach (var item in font)
@@ -168,6 +171,32 @@ namespace Lesson6
             {
                 richTextBox1.SelectionColor = colorCollection.Color;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int start = 0;
+            int end = richTextBox1.Text.LastIndexOf(textBox1.Text);
+
+            while (start < end)
+            {
+                richTextBox1.Find(textBox1.Text, start, richTextBox1.TextLength, RichTextBoxFinds.MatchCase);
+
+                richTextBox1.SelectionBackColor= Color.Red;
+
+                start = richTextBox1.Text.IndexOf(textBox1.Text, start) + 1;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+            richTextBox1.SelectionBackColor = Color.White;
+        }
+        
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel2.Text = DateTime.Now.ToShortDateString() + ", " + DateTime.Now.ToLongTimeString();
         }
     }
 }
