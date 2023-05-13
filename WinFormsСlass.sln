@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson4", "Lessson4\Lesson4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson4_1", "Lesson4_1\Lesson4_1.csproj", "{F29C9A4F-AB53-4C82-AF6C-D8FFB1E16B5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6", "Lesson6\Lesson6.csproj", "{88E783AF-11B7-4774-90DB-049CC0A2839E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text Editor", "Lesson6\Text Editor.csproj", "{88E783AF-11B7-4774-90DB-049CC0A2839E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{14D81F6C-F47F-4859-A853-745D0917838D}"
 EndProject
